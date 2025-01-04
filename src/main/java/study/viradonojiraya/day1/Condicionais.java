@@ -1,4 +1,4 @@
-package study.viradonojiraya.month01.day04;
+package study.viradonojiraya.day1;
 
 import java.util.Scanner;
 

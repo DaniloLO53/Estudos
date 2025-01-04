@@ -1,4 +1,4 @@
-package study.viradonojiraya.month01.day04;
+package study.viradonojiraya.day1;
 
 public class Operadores {
     public static void main(String[] args) {
