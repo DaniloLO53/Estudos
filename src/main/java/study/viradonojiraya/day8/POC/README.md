@@ -1,4 +1,22 @@
 # Exceptions
+
+Ideally, the developer should predict the behavior of the system to be designed, paying attention to possible external API failures, faulty code sections or anomalous user behavior. One tool for this purpose is exceptions.
+
+As everything in Java is object-oriented, the _Throwable_ class is responsible for all types of errors and exceptions thrown by the JVM. Two classes descend from it:
+- Error: thrown when the source of the error is the JVM itself - there is not much to do in this case;
+- Exception: this is the class that the developer needs to worry about most, and can be divided into two categories: Unchecked Exceptions (RuntimeException) and Checked Exceptions.
+
+Unchecked exceptions are generally caused by an error in the code itself, such as division by zero, and are not checked by the compiler. Therefore, they must be resolved logically in the code using if-else, for example.
+Checked exceptions, in turn, are detected by the compiler at compile time (despite being thrown at run time) and, therefore, for the code to be compiled, this type of exception needs to be handled.
+
+
+<img src="exception_hierarchy.png" />
+
+<i>Font: https://java8.info.com</i>
+
+## Unchecked Exceptions (Runtime Exception)
+They're pretty simple to deal with, as it's basically an exception caused by the developer most of the time. It can be thrown when an array receives an unexpected quantity of data (greater than the established) or with invalid operators. We can handle this kind of error by try-catch or simply with some logic to deal with it, like throwing a IllegalArgumentException object (`throw new IllegalArgumentException("Message")`). That way, the exception must be handled by the caller.
+
 ## Checked Exceptions
 <strong>Checked</strong> exceptions are meant to be detected by the compiler at compile time (even though it's thrown at execution time). These exceptions need to be handled by the developer and, normally, they occur due to user's fault.
 
@@ -13,7 +31,7 @@ Examples:
 `public Image loadImage(String s) throws
 FileNotFoundException, EOFException`
 
-In this way, the compiler can throw an object of the FileNotFoundException class.
+In this way, the compiler can throw an object of the _FileNotFoundException_ class.
 <br>
 It's important to note that, if a class B extends a class A which throws an exception, then B must throw a more specific exception than the one thrown by A. As matter of fact, B don't even need to throw an exception and, furthermore, if class A don't throw any exception, neither class B must do.
 
@@ -41,7 +59,7 @@ String readData(Scanner in) throws EOFException {
 When the exception is thrown, the return is not called and the code stop to execute right away.
 
 ### Creating our own exceptions
-We just need to extend the Exception class or one of its subclasses. Check this example:
+We just need to extend the _Exception_ class or one of its subclasses. Check this example:
 
 ```
 class FileFormatException extends IOException {
