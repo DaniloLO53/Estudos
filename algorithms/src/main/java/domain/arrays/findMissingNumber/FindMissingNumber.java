@@ -1,6 +1,4 @@
-package domain.arrays;
-
-import application.PrintArray;
+package domain.arrays.findMissingNumber;
 
 public class FindMissingNumber {
     public static void main(String[] args) {
