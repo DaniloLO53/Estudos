@@ -15,7 +15,6 @@ public class SetTest {
         mangas.add(new Manga(2L, "Dragon Ball", 15.29));
 
 
-        mangas.
 
         for (Manga manga: mangas) {
             System.out.println(manga.getName());
