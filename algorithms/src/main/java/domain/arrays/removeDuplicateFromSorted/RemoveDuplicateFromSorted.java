@@ -1,7 +1,9 @@
 package domain.arrays.removeDuplicateFromSorted;
 
+import application.PrintArray;
+
 public class RemoveDuplicateFromSorted {
-    public int remove(int[] arr) {
+    public static int remove(int[] arr) {
         int i = 0, j = 0;
 
         while(i < arr.length) {
@@ -13,4 +15,11 @@ public class RemoveDuplicateFromSorted {
         }
         return j+1;
     }
+
+    public static void main(String[] args) {
+        int[] arr = {1,1,2,3,3,3,4};
+        System.out.println(remove(arr));
+        PrintArray.print(arr);
+    }
 }
+
