@@ -17,6 +17,7 @@ public class OuterClassesTest1 {
 
         public void printOuterClassAttribute() {
             System.out.println(name);
+            System.out.println(this);
         }
     }
 
