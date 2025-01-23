@@ -11,13 +11,6 @@ public class ParameterBehaviour2 {
     private static List<Car> cars = new ArrayList<>(List.of(new Car("Blue", 1996), new Car("Green", 2020), new Car("Red", 2009)));
 
     public static void main(String[] args) {
-        List<Car> cars2 = filterCarsPredicate(cars, new CarPredicate() {
-            @Override
-            public boolean test(Car car) {
-                return car.getColor().equals("Green");
-            }
-        });
-
         List<Car> cars1 = filterCarsPredicate(cars, new CarPredicate() {
             @Override
             public boolean test(Car car) {
@@ -32,10 +25,15 @@ public class ParameterBehaviour2 {
             }
         });
 
+        List<Car> cars2 = filterCarsPredicate(cars, new CarPredicate() {
+            @Override
+            public boolean test(Car car) {
+                return car.getColor().equals("Green");
+            }
+        });
 
-        System.out.println(cars1);
-        System.out.println(cars2);
-        System.out.println(integersOver5);
+        List<Car> cars3 = filterCarsPredicate(cars, car -> car.getColor().equals("Green"));
+
     }
 
     private static List<Car> filterCarsPredicate(List<Car> cars, CarPredicate carPredicate) {
@@ -62,4 +60,22 @@ public class ParameterBehaviour2 {
         return filteredObjects;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
