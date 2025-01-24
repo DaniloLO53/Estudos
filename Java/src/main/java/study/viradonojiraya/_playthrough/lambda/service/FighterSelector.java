@@ -1,5 +1,6 @@
 package study.viradonojiraya._playthrough.lambda.service;
 
+import study.viradonojiraya._playthrough.lambda.domain.Character;
 import study.viradonojiraya._playthrough.lambda.domain.Ninja;
 
 import java.util.ArrayList;
@@ -30,6 +31,22 @@ public class FighterSelector {
                 return ninja.getName();
             }
         });
+    }
+
+    public static List<String> sortNinjaByNameAndRetrieveAttackOverNLambda(List<Ninja> list, int attack) {
+        list.sort(new Comparator<Ninja>() {
+            @Override
+            public int compare(Ninja o1, Ninja o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
+        list.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
+        list.sort(Comparator.comparing(ninja -> ninja.getName()));
+        list.sort(Comparator.comparing(Character::getName));
+
+        List<Ninja> filteredList = filterList(list, ninja -> ninja.getAttack() > attack);
+
+        return mapList(filteredList, Character::getName);
     }
 
     private static <T> List<T> filterList(List<T> list, Predicate<T> predicate) {
