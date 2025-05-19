@@ -3,9 +3,38 @@ package study.random.OOP;
 public class Enemy {
     private float attackScore;
     private float defenseScore;
+    private String name;
+    private String[] weaknesses;
 
-    public void talk(String message) {
-        System.out.println(message);
+    {
+
+    }
+
+    public Enemy(float attackScore, float defenseScore) {
+        this.attackScore = attackScore;
+        this.defenseScore = defenseScore;
+    }
+
+    public Enemy(float attackScore, float defenseScore, String name) {
+        this(attackScore, defenseScore);
+        this.name = name;
+    }
+
+    public Enemy() {
+
+    }
+
+    public void showInfo(float attackScore) {
+        System.out.printf("""
+                Attack score: %s
+                """, attackScore);
+    }
+
+    public void showInfo(float attackScore, float defenseScore) {
+        System.out.printf("""
+                Attack score: %s
+                Defense score: %s
+                """, attackScore, defenseScore);
     }
 
     public float getAttackScore() {
