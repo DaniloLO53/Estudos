@@ -1,4 +1,4 @@
-package study.random.OOP;
+package study.random.OOP1;
 
 public enum EnemyMode {
     NORMAL(1, 1) {

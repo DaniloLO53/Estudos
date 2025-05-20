@@ -1,4 +1,4 @@
-package study.random.OOP;
+package study.random.OOP1;
 
 public class EnemySavedStatus {
     private static float attackScore;

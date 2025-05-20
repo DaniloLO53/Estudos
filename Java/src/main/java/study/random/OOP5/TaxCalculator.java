@@ -14,5 +14,7 @@ public class TaxCalculator {
     public static void calculateTax(Product product) {
         float tax = product.calculateTax();
         System.out.println("Title: " + product.getTitle() + " | " + "Tax: " + tax);
+
+
     }
 }
