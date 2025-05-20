@@ -7,6 +7,8 @@ public abstract class Person {
         this.name = name;
     }
 
+    public abstract void presentation();
+
     public String getName() {
         return name;
     }

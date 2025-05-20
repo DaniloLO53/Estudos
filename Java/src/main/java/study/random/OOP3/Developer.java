@@ -8,6 +8,11 @@ public class Developer extends Employee {
     }
 
     @Override
+    public void presentation() {
+        System.out.println("My name is " + this.name);
+    }
+
+    @Override
      public float calculateBonus() {
         return this.salary * 0.05f;
     }

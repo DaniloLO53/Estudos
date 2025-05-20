@@ -19,7 +19,7 @@ public class Team {
         return developers;
     }
 
-    public void setDevelopers(Developer[] developers) {
+    public void setDevelopers(Developer... developers) {
         this.developers = developers;
     }
 }

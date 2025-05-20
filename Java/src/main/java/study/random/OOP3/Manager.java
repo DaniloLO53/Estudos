@@ -8,8 +8,20 @@ public class Manager extends Employee {
     }
 
     @Override
+    public void presentation() {
+        System.out.println("My name is " + this.name);
+    }
+
+    @Override
     public float calculateBonus() {
-        return this.salary * 0.1f;
+        Developer[] teamDevelopers = team.getDevelopers();
+
+        float developersTotalBonus = 0;
+        for (Developer teamDeveloper : teamDevelopers) {
+            developersTotalBonus += teamDeveloper.calculateBonus();
+        }
+
+        return this.salary * 0.1f + developersTotalBonus * 0.2f;
     }
 
     public Team getTeam() {
