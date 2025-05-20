@@ -6,7 +6,7 @@ public class Manager implements Employee {
 
     @Override
     public void presentation() {
-        System.out.println();
+        System.out.println("Hi, my name is " + this.name);
     }
 
     @Override

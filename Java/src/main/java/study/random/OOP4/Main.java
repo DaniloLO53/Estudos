@@ -14,6 +14,6 @@ public class Main {
         System.out.println(manager.calculateBonus());
         System.out.println(developer.calculateBonus());
 
-        developer.nicePhrase();
+        developer.showNicePhrase();
     }
 }

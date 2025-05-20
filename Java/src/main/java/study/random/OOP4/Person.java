@@ -7,4 +7,6 @@ public interface Person {
     default void showNicePhrase() {
         System.out.println(NICE_PHRASE);
     }
+
+    void presentation();
 }

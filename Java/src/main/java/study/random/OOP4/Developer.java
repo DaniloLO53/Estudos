@@ -6,7 +6,7 @@ public class Developer implements Employee, Upgradable {
 
     @Override
     public void presentation() {
-        System.out.println("My name is " + name);
+        System.out.println("Hi, my name is " + this.name);
     }
 
     @Override
