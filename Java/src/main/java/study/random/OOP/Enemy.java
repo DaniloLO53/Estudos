@@ -1,12 +1,13 @@
 package study.random.OOP;
 
-public class Enemy {
-    private float health = 5000;
-    private char mode;
-    private static float attackScore;
-    private static float defenseScore;
-    private static Item[] items;
-    private EnemyHorde horde;
+public abstract class Enemy {
+    protected float health;
+    protected EnemyMode mode;
+    protected static float attackScore;
+    protected static float defenseScore;
+    protected static Item[] items;
+    protected EnemyHorde horde;
+    public static final float MAX_HEALTH = 2000;
 
     static {
         attackScore = EnemySavedStatus.getAttackScore();
@@ -17,11 +18,11 @@ public class Enemy {
 
     }
 
-    public Enemy(char mode) {
+    public Enemy(EnemyMode mode) {
         this.mode = mode;
     }
 
-    public Enemy(char mode, Item[] items) {
+    public Enemy(EnemyMode mode, Item[] items) {
         this(mode);
         Enemy.items = items;
     }
@@ -52,11 +53,11 @@ public class Enemy {
         Enemy.items = items;
     }
 
-    public char getMode() {
+    public EnemyMode getMode() {
         return mode;
     }
 
-    public void setMode(char mode) {
+    public void setMode(EnemyMode mode) {
         this.mode = mode;
     }
 
