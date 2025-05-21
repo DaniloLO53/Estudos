@@ -6,5 +6,7 @@ public class TaxCalculator {
         double tax = product.calculateTax();
 
         System.out.println("Name: " + name + " | " + "Tax: " + tax);
+
+        if (product instanceof Tomato) System.out.println(((Tomato) product).getExpiryDate());
     }
 }

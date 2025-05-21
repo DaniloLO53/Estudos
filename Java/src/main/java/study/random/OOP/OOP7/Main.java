@@ -5,6 +5,10 @@ public class Main {
         Computer computer = new Computer("Samsung", 4000);
         Tomato tomato = new Tomato("Sicilian tomato", 10);
 
-        TaxCalculator.calculate(tomato);
+        tomato.setExpiryDate("20/07/2025");
+
+        TaxCalculator.calculate(computer);
+
+        computer.showProductType();
     }
 }
