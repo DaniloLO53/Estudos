@@ -1,4 +1,4 @@
-package study.random.Collections.LIST;
+package study.random.Collections.HASHMAP;
 
 public class Computer extends Product implements Comparable<Computer> {
     public Computer(String serialNumber, String model, Double price) {

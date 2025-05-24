@@ -1,9 +1,6 @@
 package study.random.Collections.LIST;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 class SmartphoneComparatorByModel implements Comparator<Smartphone> {
     @Override
@@ -65,5 +62,14 @@ public class Main {
 
         System.out.println("Index of " + smartphoneToSearch.getModel() + ": " + indexOfSmartphone);
         System.out.println("Index of " + computerToSearch.getModel() + ": " + indexOfComputer);
+
+        Iterator<Computer> computerIterator = computers.iterator();
+        while (computerIterator.hasNext()) {
+            if (computerIterator.next().getPrice() > 10_000.00) {
+                computerIterator.remove();
+            }
+        }
+
+        System.out.println(computers);
     }
 }
